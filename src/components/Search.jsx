@@ -1,5 +1,5 @@
 import { useState } from "react";
-import{ Search } from 'lucide-react';
+import{ View} from 'lucide-react';
 
 
 const Search = ({ onSearch, isLoading }) => {
@@ -16,7 +16,7 @@ const Search = ({ onSearch, isLoading }) => {
     return (
         <form onSubmit = {handleSubmit} className = "w-full max-w-3xl mx-auto">
            <div className="relative">
-            <Search className = "absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <View className = "absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
             <input
                 type="text"
                 value={query}
@@ -51,3 +51,5 @@ const Search = ({ onSearch, isLoading }) => {
         </form>
     );
 };
+
+export default Search

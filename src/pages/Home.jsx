@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import SearchBar from '../components/SearchBar';
+import Search from '../components/Search';
 import ShowCard from '../components/ShowCard';
 import { Flame, Award, Film } from 'lucide-react';
 
@@ -47,9 +47,9 @@ const Home = () => {
     <div className="space-y-8">
       <div className="text-center space-y-4">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-          <GroupTracker></GroupTracker>
+          GroupTracker
         </h1>
-        <SearchBar onSearch={handleSearch} isLoading={searchLoading} />
+        <Search onSearch={handleSearch} isLoading={searchLoading} />
       </div>
 
       {!searchResults.length && (

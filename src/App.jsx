@@ -24,3 +24,5 @@ function App() {
     </MyListProvider>
   )
 }
+
+export default App; 

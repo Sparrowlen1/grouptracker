@@ -3,7 +3,7 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import MyList from './pages/MyList'
-import ShowDetails from './pages/ShowDetail'
+import ShowDetail from './pages/ShowDetail'
 import {MyListProvider} from './context/MyListContext'
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/my-list" element={<MyList />} />
-            <Route path="/shows/:id" element={<ShowDetails />} />
+            <Route path="/show/:id" element={<ShowDetail />} />
           </Routes>
         </div>
         </div>

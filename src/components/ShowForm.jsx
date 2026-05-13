@@ -29,7 +29,7 @@ const ShowForm = ({ show, onSubmit, onClose }) => {
         </div>
         
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Status Selection */}
+        
           <div>
             <label className="flex items-center space-x-2 text-sm mb-2">
               <Clock className="w-4 h-4 text-blue-500" />
@@ -58,7 +58,7 @@ const ShowForm = ({ show, onSubmit, onClose }) => {
             </div>
           </div>
 
-          {/* Rating Input */}
+          
           <div>
             <label className="flex items-center space-x-2 text-sm mb-2">
               <Star className="w-4 h-4 text-yellow-500" />
@@ -86,7 +86,7 @@ const ShowForm = ({ show, onSubmit, onClose }) => {
             </div>
           </div>
           
-          {/* Notes Textarea */}
+          
           <div>
             <label className="flex items-center space-x-2 text-sm mb-2">
               <FileText className="w-4 h-4 text-purple-500" />
@@ -101,7 +101,6 @@ const ShowForm = ({ show, onSubmit, onClose }) => {
             />
           </div>
           
-          {/* Current Saved Info Preview */}
           {(show?.personalRating || show?.personalNotes || show?.status) && (
             <div className="bg-gray-800/50 rounded-lg p-3 text-sm">
               <p className="text-xs text-gray-400 mb-2">Currently Saved:</p>

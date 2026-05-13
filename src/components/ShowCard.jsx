@@ -39,16 +39,16 @@ const ShowCard = ({ show }) => {
         <div className="relative aspect-[2/3]">
           <img src={imageUrl} alt={show.name} className="w-full h-full object-cover" />
           
-          {/* Rating Badge */}
+    
           <div className="absolute top-2 right-2 px-2 py-1 bg-black/70 rounded-lg flex items-center space-x-1">
             <Star className="w-3 h-3 text-yellow-500 fill-current" />
             <span className="text-xs">{rating}</span>
           </div>
           
-          {/* Status Badge - Shows if in my list */}
+          
           {getStatusBadge()}
           
-          {/* Personal Rating Badge */}
+          
           {myShowData?.personalRating && (
             <div className="absolute bottom-2 left-2 px-2 py-1 bg-yellow-600 rounded-lg text-xs font-semibold">
                {myShowData.personalRating}

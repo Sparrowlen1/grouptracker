@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Tv, List, Home } from 'lucide-react';
+import { Tv, Home, Equal } from 'lucide-react';
 
 const Navbar = () => {
   const location = useLocation();
@@ -30,7 +30,8 @@ const Navbar = () => {
                 ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white' 
                 : 'text-gray-300 hover:bg-white/10'
             }`}>
-              <List className="w-5 h-5" />
+              <div className='flex flex-row gap-2'><Equal/> MyList</div>
+            
             </Link>
           </div>
         </div>
@@ -39,4 +40,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;

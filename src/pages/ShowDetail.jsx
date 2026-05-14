@@ -136,7 +136,7 @@ const ShowDetail = () => {
             )}
 
             <div className="mt-4">
-              <h2 className="text-xl font-semibold mb-2">Summary</h2>
+              <h2 className="text-gray-400 text-xl font-semibold mb-2">Summary</h2>
               <div 
                 className="text-white leading-relaxed" 
                 dangerouslySetInnerHTML={{ __html: show.summary || 'No summary available.' }} 

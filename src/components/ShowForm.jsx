@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {Tv,X, Calendar, Star,FileText,Clock,Save,Eye,CheckCirle,Calender,Xcircle} from 'lucide-react';
+import { Tv, X, Calendar, Star, FileText, Clock, Save, Check, Ban,Pin } from 'lucide-react';
 
 const ShowForm = ({ show, onSubmit, onClose }) => {
   const [rating, setRating] = useState(show?.personalRating || '');
@@ -106,7 +106,7 @@ const ShowForm = ({ show, onSubmit, onClose }) => {
               <p className="text-xs text-gray-400 mb-2">Currently Saved:</p>
               {show?.status && <p className="text-xs flex items-center gap-1"><Pin className="w-3 h-3" /> Status: {show.status}</p>}
               {show?.personalRating && <p className="flex items-center gap-1"><Star className="w-3 h-3" /> Rating: {show.personalRating}/10</p>}
-              {show?.personalNotes && <p className="text-xs text-gray-400 mt-1 line-clamp-2">📝 {show.personalNotes}</p>}
+              {show?.personalNotes && <p className="text-xs text-gray-400 mt-1 line-clamp-2"> {show.personalNotes}</p>}
             </div>
           )}
           

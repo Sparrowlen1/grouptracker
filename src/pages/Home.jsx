@@ -24,9 +24,9 @@ const Home = () => {
     fetchData();
   }, []);
 
-  const handleSearch = async (query) => {
+  const handleSearch = async (message) => {
     setSearchLoading(true);
-    const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${query}`);
+    const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${message}`);
     setSearchResults(res.data.map(item => item.show));
     setActiveTab('search');
     setSearchLoading(false);

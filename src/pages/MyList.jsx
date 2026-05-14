@@ -49,10 +49,6 @@ const MyList = () => {
         </div>
         
         <div className="space-y-4">
-<<<<<<< HEAD
-=======
-          
->>>>>>> f15e889 (fix:fixed the undefined lucide react icons that brought about rendereing isssues)
           <div className="bg-gray-800 rounded-lg p-3">
             <div className="flex items-center gap-2 text-sm text-gray-400 mb-1">
               <Clock className="w-4 h-4" />
@@ -66,10 +62,6 @@ const MyList = () => {
             </p>
           </div>
           
-<<<<<<< HEAD
-=======
-        
->>>>>>> f15e889 (fix:fixed the undefined lucide react icons that brought about rendereing isssues)
           {show.personalRating && (
             <div className="bg-gray-800 rounded-lg p-3">
               <div className="flex items-center gap-2 text-sm text-gray-400 mb-1">
@@ -87,10 +79,6 @@ const MyList = () => {
             </div>
           )}
           
-<<<<<<< HEAD
-=======
-          
->>>>>>> f15e889 (fix:fixed the undefined lucide react icons that brought about rendereing isssues)
           {show.personalNotes && (
             <div className="bg-gray-800 rounded-lg p-3">
               <div className="flex items-center gap-2 text-sm text-gray-400 mb-1">
@@ -101,10 +89,6 @@ const MyList = () => {
             </div>
           )}
           
-<<<<<<< HEAD
-=======
-         
->>>>>>> f15e889 (fix:fixed the undefined lucide react icons that brought about rendereing isssues)
           <div className="bg-gray-800 rounded-lg p-3">
             <div className="flex items-center gap-2 text-sm text-gray-400 mb-1">
               <Calendar className="w-4 h-4" />
@@ -114,10 +98,6 @@ const MyList = () => {
             {show.updatedAt && <p className="text-sm">Last updated: {new Date(show.updatedAt).toLocaleDateString()}</p>}
           </div>
           
-<<<<<<< HEAD
-=======
-          
->>>>>>> f15e889 (fix:fixed the undefined lucide react icons that brought about rendereing isssues)
           <div className="bg-gray-800 rounded-lg p-3">
             <div className="flex items-center gap-2 text-sm text-gray-400 mb-1">
               <Film className="w-4 h-4" />
@@ -164,7 +144,7 @@ const MyList = () => {
         <p className="text-gray-400">{myShows.length} shows in your collection</p>
       </div>
 
-       <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2">
         <button onClick={() => setFilter('all')} className={`px-3 py-1.5 rounded-lg text-sm transition-all ${filter === 'all' ? 'bg-blue-600' : 'bg-gray-800'}`}>
           All ({counts.all})
         </button>
@@ -182,10 +162,6 @@ const MyList = () => {
         </button>
       </div>
 
-<<<<<<< HEAD
-=======
-      
->>>>>>> f15e889 (fix:fixed the undefined lucide react icons that brought about rendereing isssues)
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {filteredShows.map(show => (
           <div key={show.id} className="relative group cursor-pointer" onClick={() => setSelectedShow(show)}>
@@ -197,18 +173,10 @@ const MyList = () => {
         ))}
       </div>
 
-<<<<<<< HEAD
-=======
-    
->>>>>>> f15e889 (fix:fixed the undefined lucide react icons that brought about rendereing isssues)
       {selectedShow && (
         <DetailsModal show={selectedShow} onClose={() => setSelectedShow(null)} />
       )}
 
-<<<<<<< HEAD
-=======
-      
->>>>>>> f15e889 (fix:fixed the undefined lucide react icons that brought about rendereing isssues)
       {editingShow && (
         <ShowForm 
           show={editingShow} 

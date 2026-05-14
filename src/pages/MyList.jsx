@@ -25,7 +25,7 @@ const MyList = () => {
   if (myShows.length === 0) {
     return (
       <div className="text-center py-16">
-        <div className="text-6xl mb-4">📺</div>
+        <div className="text-6xl mb-4"></div>
         <h2 className="text-2xl font-bold mb-2">Your list is empty</h2>
         <p className="text-gray-400 mb-4">Start adding shows to track what you watch!</p>
         <a href="/" className="inline-block px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg">
@@ -57,10 +57,10 @@ const MyList = () => {
               <span>Watch Status</span>
             </div>
             <p className="font-semibold">
-              {show.status === 'watching' && '📺 Currently Watching'}
-              {show.status === 'completed' && '✅ Completed'}
-              {show.status === 'planning' && '📅 Planning to Watch'}
-              {show.status === 'dropped' && '❌ Dropped'}
+              {show.status === 'watching' && ' Currently Watching'}
+              {show.status === 'completed' && ' Completed'}
+              {show.status === 'planning' && ' Planning to Watch'}
+              {show.status === 'dropped' && ' Dropped'}
             </p>
           </div>
           
@@ -156,16 +156,16 @@ const MyList = () => {
           All ({counts.all})
         </button>
         <button onClick={() => setFilter('watching')} className={`px-3 py-1.5 rounded-lg text-sm flex items-center gap-1 transition-all ${filter === 'watching' ? 'bg-blue-600' : 'bg-gray-800'}`}>
-          📺 Watching ({counts.watching})
+           Watching ({counts.watching})
         </button>
         <button onClick={() => setFilter('completed')} className={`px-3 py-1.5 rounded-lg text-sm flex items-center gap-1 transition-all ${filter === 'completed' ? 'bg-blue-600' : 'bg-gray-800'}`}>
-          ✅ Completed ({counts.completed})
+           Completed ({counts.completed})
         </button>
         <button onClick={() => setFilter('planning')} className={`px-3 py-1.5 rounded-lg text-sm flex items-center gap-1 transition-all ${filter === 'planning' ? 'bg-blue-600' : 'bg-gray-800'}`}>
-          📅 Planning ({counts.planning})
+           Planning ({counts.planning})
         </button>
         <button onClick={() => setFilter('dropped')} className={`px-3 py-1.5 rounded-lg text-sm flex items-center gap-1 transition-all ${filter === 'dropped' ? 'bg-blue-600' : 'bg-gray-800'}`}>
-          ❌ Dropped ({counts.dropped})
+           Dropped ({counts.dropped})
         </button>
       </div>
 

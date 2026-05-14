@@ -55,10 +55,17 @@ const MyList = () => {
               <span>Watch Status</span>
             </div>
             <p className="font-semibold">
+<<<<<<< HEAD
               {show.status === 'watching' && ' Currently Watching'}
               {show.status === 'completed' && ' Completed'}
               {show.status === 'planning' && ' Planning to Watch'}
               {show.status === 'dropped' && ' Dropped'}
+=======
+              {show.status === 'watching' && 'Currently Watching'}
+              {show.status === 'completed' && 'Completed'}
+              {show.status === 'planning' && 'Planning to Watch'}
+              {show.status === 'dropped' && 'Dropped'}
+>>>>>>> 69e02cf (fixed mylist error)
             </p>
           </div>
           

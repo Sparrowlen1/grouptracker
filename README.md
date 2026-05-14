@@ -1,6 +1,6 @@
 # Group7 - TV Show Tracker
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=500&color=3B82F6&background=FFFFFF00&center=true&vCenter=true&width=600&lines=Track+Your+TV+Shows;Rate+and+Review+Series;Never+Miss+an+Episode;Your+Personal+TV+Tracker)](https://git.io/typing-svg)
-A web application to search, track, and review your favorite TV shows.
+- A web application to search, track, and review your favorite TV shows.
 
 ## Features
 

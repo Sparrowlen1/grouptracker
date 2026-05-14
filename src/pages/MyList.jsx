@@ -35,7 +35,6 @@ const MyList = () => {
     );
   }
 
-  // Details Modal Component
   const DetailsModal = ({ show, onClose }) => (
     <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
       <div className="bg-gray-900 rounded-2xl p-6 w-full max-w-lg max-h-[80vh] overflow-y-auto">
@@ -50,7 +49,6 @@ const MyList = () => {
         </div>
         
         <div className="space-y-4">
-          {/* Status */}
           <div className="bg-gray-800 rounded-lg p-3">
             <div className="flex items-center gap-2 text-sm text-gray-400 mb-1">
               <Clock className="w-4 h-4" />
@@ -64,7 +62,6 @@ const MyList = () => {
             </p>
           </div>
           
-          {/* Rating */}
           {show.personalRating && (
             <div className="bg-gray-800 rounded-lg p-3">
               <div className="flex items-center gap-2 text-sm text-gray-400 mb-1">
@@ -82,7 +79,6 @@ const MyList = () => {
             </div>
           )}
           
-          {/* Notes */}
           {show.personalNotes && (
             <div className="bg-gray-800 rounded-lg p-3">
               <div className="flex items-center gap-2 text-sm text-gray-400 mb-1">
@@ -93,7 +89,6 @@ const MyList = () => {
             </div>
           )}
           
-          {/* Dates */}
           <div className="bg-gray-800 rounded-lg p-3">
             <div className="flex items-center gap-2 text-sm text-gray-400 mb-1">
               <Calendar className="w-4 h-4" />
@@ -103,7 +98,6 @@ const MyList = () => {
             {show.updatedAt && <p className="text-sm">Last updated: {new Date(show.updatedAt).toLocaleDateString()}</p>}
           </div>
           
-          {/* Original Show Info */}
           <div className="bg-gray-800 rounded-lg p-3">
             <div className="flex items-center gap-2 text-sm text-gray-400 mb-1">
               <Film className="w-4 h-4" />
@@ -150,8 +144,7 @@ const MyList = () => {
         <p className="text-gray-400">{myShows.length} shows in your collection</p>
       </div>
 
-      {/* Status Filters */}
-      <div className="flex flex-wrap gap-2">
+       <div className="flex flex-wrap gap-2">
         <button onClick={() => setFilter('all')} className={`px-3 py-1.5 rounded-lg text-sm transition-all ${filter === 'all' ? 'bg-blue-600' : 'bg-gray-800'}`}>
           All ({counts.all})
         </button>
@@ -169,7 +162,6 @@ const MyList = () => {
         </button>
       </div>
 
-      {/* Shows Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {filteredShows.map(show => (
           <div key={show.id} className="relative group cursor-pointer" onClick={() => setSelectedShow(show)}>
@@ -181,12 +173,10 @@ const MyList = () => {
         ))}
       </div>
 
-      {/* Details Modal */}
       {selectedShow && (
         <DetailsModal show={selectedShow} onClose={() => setSelectedShow(null)} />
       )}
 
-      {/* Edit Form Modal */}
       {editingShow && (
         <ShowForm 
           show={editingShow} 

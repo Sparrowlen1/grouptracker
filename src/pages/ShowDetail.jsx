@@ -81,7 +81,7 @@ const ShowDetail = () => {
     <div className="max-w-6xl mx-auto px-4">
       <button 
         onClick={handleBack} 
-        className="flex items-center space-x-2 text-gray-400 hover:text-white mb-6"
+        className="flex items-center space-x-2 text-white hover:text-blue-400 transition-colors mb-6"
       >
         <ArrowLeft className="w-5 h-5" />
         <span>Back</span>
@@ -99,7 +99,7 @@ const ShowDetail = () => {
           
           <div className="p-6 md:w-2/3">
             <div className="flex justify-between items-start mb-4">
-              <h1 className="text-3xl font-bold">{show.name}</h1>
+             <h1 className="text-3xl font-bold text-white">{show.name}</h1>
               <button
                 onClick={toggleMyList}
                 className={`p-2 rounded-lg ${inMyList ? 'bg-green-600' : 'bg-blue-600'}`}
@@ -108,7 +108,7 @@ const ShowDetail = () => {
               </button>
             </div>
 
-            <div className="flex gap-4 mb-4 text-sm text-gray-400">
+            <div className="flex gap-4 mb-4 text-sm text-gray-200 font-medium">
               {show.premiered && (
                 <div className="flex items-center gap-1">
                   <Calendar className="w-4 h-4" />
@@ -130,7 +130,7 @@ const ShowDetail = () => {
             {show.genres && (
               <div className="flex gap-2 mb-4 flex-wrap">
                 {show.genres.map(genre => (
-                  <span key={genre} className="px-2 py-1 bg-gray-800 rounded-lg text-sm">{genre}</span>
+                 <span key={genre} className="px-2 py-1 bg-gray-800 text-white border border-gray-700 rounded-lg text-sm">{genre}</span>
                 ))}
               </div>
             )}
@@ -138,19 +138,19 @@ const ShowDetail = () => {
             <div className="mt-4">
               <h2 className="text-xl font-semibold mb-2">Summary</h2>
               <div 
-                className="text-gray-300" 
+                className="text-white leading-relaxed" 
                 dangerouslySetInnerHTML={{ __html: show.summary || 'No summary available.' }} 
               />
             </div>
 
             {show.status && (
-              <p className="mt-4 text-sm text-gray-400">Status: {show.status}</p>
+              <p className="mt-4 text-sm text-gray-200 font-medium italic">Status: <span className="text-white">{show.status}</span></p>
             )}
 
             {episodes.length > 0 && (
               <button
                 onClick={() => setShowEpisodes(!showEpisodes)}
-                className="mt-4 flex items-center space-x-2 px-4 py-2 bg-gray-800 rounded-lg"
+                className="text-white mt-4 flex items-center space-x-2 px-4 py-2 bg-gray-800 rounded-lg"
               >
                 <List className="w-4 h-4" />
                 <span>{showEpisodes ? 'Hide' : 'View'} Episodes ({episodes.length})</span>
@@ -168,19 +168,19 @@ const ShowDetail = () => {
                   <div className="flex justify-between items-start">
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="text-sm font-mono text-blue-400">
+                        <span className="text-sm font-mono text-blue-300 font-bold">
                           S{episode.season}E{episode.number}
                         </span>
-                        <h4 className="font-semibold">{episode.name}</h4>
+                        <h4 className="font-semibold text-white">{episode.name}</h4>
                       </div>
                       {episode.airdate && (
-                        <p className="text-xs text-gray-400 mb-2">
+                        <p className="text-xs text-gray-300 mb-2">
                           {new Date(episode.airdate).toLocaleDateString()}
                         </p>
                       )}
                       {episode.summary && (
                         <p 
-                          className="text-sm text-gray-400 line-clamp-2" 
+                          className="text-sm text-gray-200 line-clamp-2" 
                           dangerouslySetInnerHTML={{ __html: episode.summary }}
                         />
                       )}

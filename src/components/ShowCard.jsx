@@ -27,7 +27,7 @@ const ShowCard = ({ show }) => {
     const config = statusConfig[myShowData.status];
     if (!config) return null;
     return (
-      <div className={`absolute top-2 left-2 px-2 py-1 ${config.color} rounded-lg text-xs font-semibold flex items-center gap-1`}>
+      <div className={`absolute top-2 left-2 px-2 py-1 ${config.color} text-white rounded-lg text-xs font-bold flex items-center gap-1 shadow-lg`}>
         <span>{config.label}</span>
       </div>
     );
@@ -42,7 +42,7 @@ const ShowCard = ({ show }) => {
     
           <div className="absolute top-2 right-2 px-2 py-1 bg-black/70 rounded-lg flex items-center space-x-1">
             <Star className="w-3 h-3 text-yellow-500 fill-current" />
-            <span className="text-xs">{rating}</span>
+           <span className="text-xs text-white font-bold">{rating}</span>
           </div>
           
           
@@ -57,7 +57,7 @@ const ShowCard = ({ show }) => {
           
           <button
             onClick={handleClick}
-            className="absolute bottom-2 right-2 p-2 bg-black/70 rounded-full hover:bg-blue-600 transition-colors"
+            className="absolute bottom-2 right-2 p-2 bg-black/70 text-white rounded-full hover:bg-blue-600 transition-colors border border-white/10"
           >
             {inMyList ? <Check className="w-4 h-4 text-green-500" /> : <Plus className="w-4 h-4" />}
           </button>
@@ -70,10 +70,10 @@ const ShowCard = ({ show }) => {
           </div>
         </div>
         <div className="p-3">
-          <h3 className="font-semibold text-sm line-clamp-1">{show.name}</h3>
-          {show.premiered && <p className="text-xs text-gray-400 mt-1">{new Date(show.premiered).getFullYear()}</p>}
+          <h3 className="font-semibold text-sm text-white line-clamp-1">{show.name}</h3>
+          {show.premiered && <p className="text-xs text-gray-200 mt-1 font-medium">{new Date(show.premiered).getFullYear()}</p>}
           {myShowData?.personalNotes && (
-            <p className="text-xs text-gray-500 mt-1 line-clamp-1 italic"> {myShowData.personalNotes.substring(0, 30)}</p>
+            <p className="text-xs text-gray-300 mt-1 line-clamp-1 italic"> "{myShowData.personalNotes.substring(0, 30)}"</p>
           )}
         </div>
       </Link>

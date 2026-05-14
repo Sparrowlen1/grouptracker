@@ -26,7 +26,7 @@ const MyList = () => {
     return (
       <div className="text-center py-16">
         <div className="text-6xl mb-4"></div>
-        <h2 className="text-2xl font-bold mb-2">Your list is empty</h2>
+        <h2 className="text-white text-2xl font-bold mb-2">Your list is empty</h2>
         <p className="text-gray-400 mb-4">Start adding shows to track what you watch!</p>
         <a href="/" className="inline-block px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg">
           Browse Shows
@@ -40,8 +40,8 @@ const MyList = () => {
       <div className="bg-gray-900 rounded-2xl p-6 w-full max-w-lg max-h-[80vh] overflow-y-auto">
         <div className="flex justify-between items-start mb-4">
           <div>
-            <h2 className="text-xl font-bold">{show.name}</h2>
-            <p className="text-xs text-gray-400 mt-1">Your saved details</p>
+            <h2 className="text-white text-xl font-bold">{show.name}</h2>
+            <p className="text-xs text-gray-300 mt-1">Your saved details</p>
           </div>
           <button onClick={onClose} className="p-1 hover:bg-gray-800 rounded-lg">
             <X className="w-5 h-5" />
@@ -50,22 +50,15 @@ const MyList = () => {
         
         <div className="space-y-4">
           <div className="bg-gray-800 rounded-lg p-3">
-            <div className="flex items-center gap-2 text-sm text-gray-400 mb-1">
+            <div className="flex items-center gap-2 text-sm text-gray-300 mb-1">
               <Clock className="w-4 h-4" />
-              <span>Watch Status</span>
+              <span className='text-white'>Watch Status</span>
             </div>
             <p className="font-semibold">
-<<<<<<< HEAD
               {show.status === 'watching' && ' Currently Watching'}
               {show.status === 'completed' && ' Completed'}
               {show.status === 'planning' && ' Planning to Watch'}
               {show.status === 'dropped' && ' Dropped'}
-=======
-              {show.status === 'watching' && 'Currently Watching'}
-              {show.status === 'completed' && 'Completed'}
-              {show.status === 'planning' && 'Planning to Watch'}
-              {show.status === 'dropped' && 'Dropped'}
->>>>>>> 69e02cf (fixed mylist error)
             </p>
           </div>
           
@@ -88,21 +81,21 @@ const MyList = () => {
           
           {show.personalNotes && (
             <div className="bg-gray-800 rounded-lg p-3">
-              <div className="flex items-center gap-2 text-sm text-gray-400 mb-1">
+              <div className="flex items-center gap-2 text-sm text-gray-300 mb-1">
                 <FileText className="w-4 h-4" />
-                <span>Your Notes</span>
+                <span className="text-white">Your Notes</span>
               </div>
-              <p className="text-sm whitespace-pre-wrap">{show.personalNotes}</p>
+              <p className="text-sm text-white whitespace-pre-wrap">{show.personalNotes}</p>
             </div>
           )}
           
           <div className="bg-gray-800 rounded-lg p-3">
-            <div className="flex items-center gap-2 text-sm text-gray-400 mb-1">
+            <div className="flex items-center gap-2 text-sm text-gray-300 mb-1">
               <Calendar className="w-4 h-4" />
-              <span>Dates</span>
+              <span className="text-white">Dates</span>
             </div>
-            <p className="text-sm">Added: {new Date(show.addedAt).toLocaleDateString()}</p>
-            {show.updatedAt && <p className="text-sm">Last updated: {new Date(show.updatedAt).toLocaleDateString()}</p>}
+            <p className="text-sm text-gray-200">Added: {new Date(show.addedAt).toLocaleDateString()}</p>
+            {show.updatedAt && <p className="text-sm text-gray-200">Last updated: {new Date(show.updatedAt).toLocaleDateString()}</p>}
           </div>
           
           <div className="bg-gray-800 rounded-lg p-3">
@@ -147,24 +140,24 @@ const MyList = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold mb-2">My List</h1>
-        <p className="text-gray-400">{myShows.length} shows in your collection</p>
+        <h1 className="text-3xl font-bold mb-2 text-white">My List</h1>
+        <p className="text-gray-300">{myShows.length} shows in your collection</p>
       </div>
 
       <div className="flex flex-wrap gap-2">
-        <button onClick={() => setFilter('all')} className={`px-3 py-1.5 rounded-lg text-sm transition-all ${filter === 'all' ? 'bg-blue-600' : 'bg-gray-800'}`}>
+        <button onClick={() => setFilter('all')} className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${filter === 'all' ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-200 hover:text-white'}`}>
           All ({counts.all})
         </button>
-        <button onClick={() => setFilter('watching')} className={`px-3 py-1.5 rounded-lg text-sm flex items-center gap-1 transition-all ${filter === 'watching' ? 'bg-blue-600' : 'bg-gray-800'}`}>
-           Watching ({counts.watching})
+        <button onClick={() => setFilter('watching')} className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${filter === 'watching' ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-200 hover:text-white'}`}>
+          Watching ({counts.watching})
         </button>
-        <button onClick={() => setFilter('completed')} className={`px-3 py-1.5 rounded-lg text-sm flex items-center gap-1 transition-all ${filter === 'completed' ? 'bg-blue-600' : 'bg-gray-800'}`}>
-           Completed ({counts.completed})
+        <button onClick={() => setFilter('completed')} className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${filter === 'completed' ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-200 hover:text-white'}`}>
+          Completed ({counts.completed})
         </button>
-        <button onClick={() => setFilter('planning')} className={`px-3 py-1.5 rounded-lg text-sm flex items-center gap-1 transition-all ${filter === 'planning' ? 'bg-blue-600' : 'bg-gray-800'}`}>
+        <button onClick={() => setFilter('planning')} className={`px-3 py-1.5 rounded-lg text-sm font-meduim flex items-center gap-1 transition-all ${filter === 'planning' ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-200 hover:text-white'}`}>
            Planning ({counts.planning})
         </button>
-        <button onClick={() => setFilter('dropped')} className={`px-3 py-1.5 rounded-lg text-sm flex items-center gap-1 transition-all ${filter === 'dropped' ? 'bg-blue-600' : 'bg-gray-800'}`}>
+        <button onClick={() => setFilter('dropped')} className={`px-3 py-1.5 rounded-lg text-sm font-medium flex items-center gap-1 transition-all ${filter === 'dropped' ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-200 hover:text-white'}`}>
            Dropped ({counts.dropped})
         </button>
       </div>

@@ -14,7 +14,7 @@ const ShowCard = ({ show }) => {
   };
 
   const imageUrl = show.image?.medium || 'https://via.placeholder.com/300x450?text=No+Image';
-  const rating = show.rating?.average || 'N/A';
+  const rating = show.rating?.average || 'null';
 
   const getStatusBadge = () => {
     if (!myShowData?.status) return null;

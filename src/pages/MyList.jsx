@@ -54,7 +54,7 @@ const MyList = () => {
               <Clock className="w-4 h-4" />
               <span className='text-white'>Watch Status</span>
             </div>
-            <p className="font-semibold">
+            <p className="font-semibold text-gray-300">
               {show.status === 'watching' && ' Currently Watching'}
               {show.status === 'completed' && ' Completed'}
               {show.status === 'planning' && ' Planning to Watch'}
@@ -103,9 +103,9 @@ const MyList = () => {
               <Film className="w-4 h-4" />
               <span>Show Info</span>
             </div>
-            {show.premiered && <p className="text-sm">Year: {new Date(show.premiered).getFullYear()}</p>}
-            {show.rating?.average && <p className="text-sm">TVmaze Rating: {show.rating.average}/10</p>}
-            {show.genres && <p className="text-sm">Genres: {show.genres.join(', ')}</p>}
+            {show.premiered && <p className="text-gray-200 text-sm">Year: {new Date(show.premiered).getFullYear()}</p>}
+            {show.rating?.average && <p className="text-sm text-gray-200">TVmaze Rating: {show.rating.average}/10</p>}
+            {show.genres && <p className="text-sm text-gray-200">Genres: {show.genres.join(', ')}</p>}
           </div>
         </div>
         

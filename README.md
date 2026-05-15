@@ -23,6 +23,7 @@
 
 ## Deployment
 - Deployed On Vercel - https://grouptracker-one.vercel.app/
+- figma link - https://www.figma.com/design/6dDm7PIUlymHsTLkHSmdpQ/GROUP7-showtracker?node-id=0-1&t=tzOw6QI9HRNIKatb-0
 
 ## Installation & Setup
 

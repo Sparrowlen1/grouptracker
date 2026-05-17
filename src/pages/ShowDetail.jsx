@@ -75,7 +75,7 @@ const ShowDetail = () => {
   if (!show) return <div className="text-center py-12">Show not found</div>;
 
   const imageUrl = show.image?.original || show.image?.medium;
-  const rating = show.rating?.average || 'N/A';
+  const rating = show.rating?.average || 'null';
 
   return (
     <div className="max-w-6xl mx-auto px-4">
